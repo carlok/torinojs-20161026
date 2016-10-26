@@ -248,14 +248,14 @@ console.log(require('crypto').randomBytes(256).toString('base64'))
         </section>
 
         <section>
-            <h2>Further studies - &#9733;&#9733;&#9734; (1/4)</h2>
+            <h2>Further studies - &#9733;&#9733;&#9734; (1/5)</h2>
 
             <img class="fragment" height="240" src="http://freecontent.manning.com/wp-content/uploads/h.gif"/>
             <p class="fragment">(<a href="https://www.manning.com/books/hapi-js-in-action">hapi.js in Action</a>)</p>
         </section>
 
         <section>
-            <h2>Further studies - &#9733;&#9733;&#9734; (2/4)</h2>
+            <h2>Further studies - &#9733;&#9733;&#9734; (2/5)</h2>
 
             <img class="fragment" height="240"
                  src="http://blog-assets.risingstack.com/2014/12/hapi_request_lifecycle.png"/>
@@ -264,7 +264,29 @@ console.log(require('crypto').randomBytes(256).toString('base64'))
         </section>
 
         <section>
-            <h2>Further studies - &#9733;&#9733;&#9734; (3/4)</h2>
+            <h2>Further studies - &#9733;&#9733;&#9734; (3/5)</h2>
+
+            <pre class="fragment">
+                <code class="data-trim contenteditable javascript">
+server.route({ method: 'GET', path: '/',
+    config: {
+        pre: [
+            [   { method: pre1, assign: 'm1' },
+                { method: pre2, assign: 'm2' } ],
+            { method: pre3, assign: 'm3' },
+        ],
+        handler: function (request, reply) {
+            return reply(request.pre.m3 + '\n');
+        }
+    }
+});
+                </code>
+            </pre>
+            <p class="fragment">See <a href="http://stackoverflow.com/a/38909177">S.O.</a></p>
+        </section>
+
+        <section>
+            <h2>Further studies - &#9733;&#9733;&#9734; (4/5)</h2>
 
             <pre class="fragment">
                 <code class="data-trim contenteditable javascript">
@@ -283,7 +305,7 @@ server.route({
         </section>
 
         <section>
-            <h2>Further studies - &#9733;&#9733;&#9734; (4/4)</h2>
+            <h2>Further studies - &#9733;&#9733;&#9734; (5/5)</h2>
 
             <pre class="fragment">
                 <code class="data-trim contenteditable javascript">
