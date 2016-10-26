@@ -58,7 +58,8 @@
             <h2>Introduction</h2>
             <ul>
                 <li class="fragment">Thanks to Giorgio Cerruti and Marco Becchio</li>
-                <li class="fragment"><a href="http://kiwifarm.it">Kiwifarm Srl</a>: three services in production ATM <span class="fragment">&#9733;</span>
+                <li class="fragment"><a href="http://kiwifarm.it">Kiwifarm Srl</a>: three services in production ATM
+                    <span class="fragment">&#9733;</span>
                 </li>
                 <li class="fragment">Are you a freelance? Feel free to contact me &#9787;</li>
             </ul>
@@ -67,7 +68,7 @@
         <section>
             <h2>hapi.js: a few notes (1/2)</h2>
             <ul>
-                <li class="fragment">ECMAScript 2015 Node.js framework (<strong>_not_</strong> Express based) mostly
+                <li class="fragment">ECMAScript 2015 Node.js framework (not Express based!) mostly
                     used for creating REST services
                 </li>
                 <li class="fragment">Robust, stable, reliable and not (so) opinionated <span class="fragment">(<a
@@ -110,7 +111,6 @@ exports.register = function (server, options, next) {
     const sayHello = function (name = 'world') {
         return `Hello ${name}`;
     };
-
     server.expose({
         sayHello: sayHello,
     });
@@ -129,11 +129,16 @@ exports.register.attributes = {
             <h2>Ecosystem</h2>
             <p>To name a few:</p>
             <ul>
-                <li class="fragment">boom (HTTP-friendly error objects)</li>
-                <li class="fragment">good (process monitoring and logging)</li>
-                <li class="fragment">hapi-swagger (guess it)</li>
-                <li class="fragment">joi (object schema validation)</li>
-                <li class="fragment">hapi-auth-jwt2-swagger (guess it once again)</li>
+                <li class="fragment"><a href="https://github.com/hapijs/boom">boom</a> (HTTP-friendly error objects)
+                </li>
+                <li class="fragment"><a href="https://github.com/hapijs/good">good</a> (process monitoring and logging)
+                </li>
+                <li class="fragment"><a href="https://github.com/glennjones/hapi-swagger">hapi-swagger</a> (guess it)
+                </li>
+                <li class="fragment"><a href="https://github.com/dwyl/hapi-auth-jwt2">hapi-auth-jwt2-swagger</a> (guess
+                    it once again)
+                <li class="fragment"><a href="https://github.com/hapijs/joi">joi</a> (object schema validation)</li>
+                </li>
             </ul>
 
             <p class="fragment">The whole pack at <a href="http://hapijs.com/plugins">hapijs.com/plugins</a></p>
@@ -150,7 +155,7 @@ exports.register.attributes = {
 
         <section>
             <h2>Ok, show me the code</h2>
-            <p><span class="fragment">github.com/carlok</span></p>
+            <p><span class="fragment"><a href="https://github.com/carlok">github.com/carlok</a></span></p>
             <ul>
                 <li class="fragment">code: <a class="fragment" href="https://github.com/carlok/hto">/hto</a>
                 </li>
@@ -161,7 +166,7 @@ exports.register.attributes = {
         </section>
 
         <section>
-            <h2>It's demo time</h2>
+            <h2>It's&hellip;<br/><span class="fragment">stretching time</span></h2>
             <img class="fragment" data-src="https://media.giphy.com/media/xT9DPlbvIe2POSISM8/giphy.gif"/>
         </section>
 
@@ -187,7 +192,7 @@ http POST localhost:1337/api/v1/users/login \
         <section>
             <h2>Demo (2)</h2>
             <pre class="fragment">
-                <code class="data-trim contenteditable bash">
+                <code class="fragment data-trim contenteditable bash">
 # GET /api/v1/users/restricted
 http --auth-type=jwt --auth='{token}:' -j --verbose \
                     localhost:1337/api/v1/users/restricted
@@ -196,7 +201,7 @@ http --auth-type=jwt --auth='{token}:' -j --verbose \
             </pre>
             <pre class="fragment">
                 <code class="data-trim contenteditable javascript">
-node -e "console.log(require('crypto').randomBytes(256).toString('base64'));"
+console.log(require('crypto').randomBytes(256).toString('base64'))
                 </code>
             </pre>
         </section>
@@ -252,7 +257,8 @@ node -e "console.log(require('crypto').randomBytes(256).toString('base64'));"
         <section>
             <h2>Further studies - &#9733;&#9733;&#9734; (2/4)</h2>
 
-            <img class="fragment" height="240" src="http://blog-assets.risingstack.com/2014/12/hapi_request_lifecycle.png"/>
+            <img class="fragment" height="240"
+                 src="http://blog-assets.risingstack.com/2014/12/hapi_request_lifecycle.png"/>
             <p class="fragment">(<a href="https://blog.risingstack.com/getting-started-with-hapi-8/">Getting Started
                 with Hapi 8</a>)</p>
         </section>
@@ -273,7 +279,7 @@ server.route({
 });
                 </code>
             </pre>
-            <p class="fragment"><a href="https://github.com/mark-bradshaw/mrhorse">(MrHorse)</a></p>
+            <p class="fragment">(<a href="https://github.com/mark-bradshaw/mrhorse">MrHorse</a>)</p>
         </section>
 
         <section>
@@ -291,14 +297,15 @@ server.route({
   },
                 </code>
             </pre>
-            <p class="fragment"><a href="https://github.com/eventhough/hapi-route-acl">(Hapi Route ACL)</a></p>
+            <p class="fragment">(<a href="https://github.com/eventhough/hapi-route-acl">Hapi Route ACL</a>)</p>
         </section>
 
         <section>
             <h2>Further studies - &#9733;&#9733;&#9733; (1/4)</h2>
             <p>Decorators (not that one)</p>
 
-            <img height="320" src="http://www.constructionsupport.co.uk/guide/wp-content/uploads/2013/09/painter-and-decorator-cscs-test-640x430.jpg"/>
+            <img height="320"
+                 src="http://www.constructionsupport.co.uk/guide/wp-content/uploads/2013/09/painter-and-decorator-cscs-test-640x430.jpg"/>
         </section>
 
         <section>
